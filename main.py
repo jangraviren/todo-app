@@ -1,7 +1,7 @@
 import os
 
 from google.cloud import aiplatform
-from langchain import LangChain
+from langchain import langchain
 
 
 def main():
@@ -16,13 +16,13 @@ def main():
     modelPath = os.path.join("models",modelName)
     
     #lets now create a langChain framework model
-    llm = LangChain()
+    llm = langchain()
     
     #now lets load the data in to this model
     llm.load(modelPath)
     
     #lets now make a prediction 
-    prediction = llm.predict("What are my today's todos")
+    prediction = llm.predict("What are my today's todos tasks")
     
     print(prediction)
     
